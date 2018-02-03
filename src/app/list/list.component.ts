@@ -14,6 +14,8 @@ export class ListComponent implements OnInit {
 
   employee: any;
 
+  response: any;
+
   user: AppString;
 
   constructor(private _employeeservices: EmployeeService ) { 
@@ -27,11 +29,17 @@ export class ListComponent implements OnInit {
     
   }
 
+  display: string;
+
   id(id:any){
     console.log(id);
     this._employeeservices.postEmployee(id)
-      .subscribe(resEmpDetails => this.employee = resEmpDetails);
-      console.log(this.employee);
+      .subscribe(resEmpDetails => this.response = resEmpDetails );
+      // this.response = JSON.stringify (this.response);
+      // this.display = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+
+      this.display = this.response.message;
+      
   }
 
 }

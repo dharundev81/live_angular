@@ -8,7 +8,8 @@ import 'rxjs/add/operator/map';
 export class EmployeeService {
 
   public url: string = "http://192.168.1.111/spellbee/json/api.json";
-  public url1: string = "http://spellbeeinternational.com/spellbeeapps/apicall/login";
+  // public url1: string = "http://spellbeeinternational.com/spellbeeapps/apicall/login";
+  public url1: string = "http://192.168.1.111/hangman/apicall/login";
 
   constructor( private http: Http) { }
 

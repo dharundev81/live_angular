@@ -2,9 +2,11 @@
 </p>
 
 <input type="text" placeholder="Enter No" [(ngModel)] = "user.id" >
-<button (click)="id(user.id)">Delete hero</button>
-
+<button (click)="id(user.id)">List Hero</button>
+<button (click)="dis(user.id)">Display</button>
 <p>{{user.id}}</p>
+<p>{{display}}</p>
+<p>{{response}}</p>
 
 <!-- <div >
     <ul *ngFor="let emp of employee">
